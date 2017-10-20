@@ -2188,7 +2188,8 @@
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #ffffff;
+		background-color: #2980b9;
+		color: #ffffff;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		height: 3.5em;
 		left: 0;
@@ -2224,6 +2225,7 @@
 		}
 
 			#header h1 a {
+				color: #ffffff;
 				font-size: 0.7em;
 			}
 
@@ -2288,8 +2290,9 @@
 				#header .links ul li a {
 					border-bottom: 0;
 					font-family: "Raleway", Helvetica, sans-serif;
+					color: #ffffff;
 					font-size: 0.7em;
-					font-weight: 400;
+					font-weight: 600;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
 				}
@@ -2320,12 +2323,11 @@
 					#header .main ul li > a {
 						text-decoration: none;
 						border-bottom: 0;
-						color: #aaaaaa;
+						color: #ffffff;
 						overflow: hidden;
 						position: relative;
 						text-indent: 4em;
 						width: 4em;
-						color: #000000;
 						/* Theoretically for IE 8 & 9 (more valid) */
 						/* ...but not required as filter works too */
 						/* should come BEFORE filter */
@@ -2385,7 +2387,7 @@
 		}
 
 			#header #search input {
-				color: #000000;
+				color: #ffffff;
 				width: 12em;
 			}
 
@@ -2500,8 +2502,8 @@
 
 	#sidebar {
 		margin-right: 3em;
-		min-width: 22em;
-		width: 22em;
+		min-width: 16em;
+		width: 16em;
 	}
 
 		#sidebar > * {
@@ -2576,7 +2578,7 @@
 			margin: 0 0 1em 0;
 			overflow: hidden;
 			position: relative;
-			width: 4em;
+			width: 14em;
 		}
 
 			#intro .logo:before {
@@ -2596,7 +2598,7 @@
 			#intro .logo img {
 				display: block;
 				margin-left: -0.25em;
-				width: 4.5em;
+				width: 14.5em;
 			}
 
 		#intro header h2 {
