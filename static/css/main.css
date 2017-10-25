@@ -2518,6 +2518,10 @@
 			padding-top: 0;
 		}
 
+		#sidebar #categories-button {
+			margin-top: 1.7em;
+		}
+
 		#sidebar #mini-bio p {
 				/* Theoretically for IE 8 & 9 (more valid) */
 				/* ...but not required as filter works too */

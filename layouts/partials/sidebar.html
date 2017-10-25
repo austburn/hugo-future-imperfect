@@ -84,10 +84,16 @@
           <a href="/categories/">Categories</a>
         </h3>
       </header>
-        {{ if .Site.Params.categoriesByCount }}
-          {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
+        {{ with .Site.Params.categoriesAmount.sidebar }}
+          {{ $.Scratch.Set "categoriesLimit" . }}
         {{ else }}
-          {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.Alphabetical }}
+          {{ $.Scratch.Set "categoriesLimit" 99 }}
+        {{ end }}
+
+        {{ if .Site.Params.categoriesByCount }}
+          {{ $.Scratch.Set "categories" (first ($.Scratch.Get "categoriesLimit") .Site.Taxonomies.categories.ByCount) }}
+        {{ else }}
+          {{ $.Scratch.Set "categories" (first ($.Scratch.Get "categoriesLimit") .Site.Taxonomies.categories.Alphabetical) }}
         {{ end }}
 
         {{ range $key, $value := $.Scratch.Get "categories" }}
@@ -102,6 +108,10 @@
               {{ end }}
             </header>
           </article>
+        {{ end }}
+
+        {{ if ge (len (.Site.Taxonomies.categories.ByCount)) ($.Scratch.Get "categoriesLimit") }}
+        <a id="categories-button" href="/categories/"class="button">View more categories</a>
         {{ end }}
     </section>
   {{ end }}
