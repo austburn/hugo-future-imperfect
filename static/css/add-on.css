@@ -1,0 +1,10 @@
+/* Flickity */
+.caption {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.flickity-page-dots {
+  bottom: -60px;
+}
